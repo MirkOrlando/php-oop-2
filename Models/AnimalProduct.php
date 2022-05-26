@@ -17,4 +17,17 @@ class AnimalProduct
         $this->discount = $discount;
         $this->available = $available;
     }
+
+    public function isCreditCardExpired(User $user)
+    {
+        if ($user->credit_card['year'] <= intval(date('Y'))) {
+            if ($user->credit_card['month'] <= intval(date('m'))) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 }

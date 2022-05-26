@@ -26,12 +26,13 @@ class User
         $this->is_signed = true;
     }
 
-    public function setCreditCard($card_number, $key_number, $expiration_date)
+    public function setCreditCard($card_number, $key_number, $expiration_month, $expiration_year)
     {
         $this->credit_card = [
             'number' => $card_number,
             'key' => $key_number,
-            'expiration date' => $expiration_date,
+            'expiration month' => $expiration_month,
+            'expiration year' => $expiration_month,
         ];
     }
 }

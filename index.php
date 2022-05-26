@@ -18,6 +18,7 @@ particolare (es. da maggio ad agosto).
 */
 
 require_once __DIR__ . '/db.php';
-
-
+//Europe/Rome
+date_default_timezone_set('Europe/Rome');
+var_dump(2022 <= intval(date('Y')));
 var_dump($data);
