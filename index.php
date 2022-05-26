@@ -17,5 +17,9 @@ caratteristica che saranno disponibili solo in un periodo
 particolare (es. da maggio ad agosto).
 */
 
-require_once __DIR__ . '/Models/AnimalProducts.php';
-require_once __DIR__ . '/Models/User.php';
+require_once __DIR__ . '/Models/AnimalProduct.php';
+require_once __DIR__ . '/Models/Feed.php';
+
+$dry_food = new Feed('Crocchette al pollo', 'Lorem ipsum dolor sit amet.', 5.99, 20, true);
+
+var_dump($dry_food);

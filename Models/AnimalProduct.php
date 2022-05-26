@@ -1,15 +1,15 @@
 <?php
 class AnimalProduct
 {
-    protected $name;
+    protected $product_name;
     protected $description;
     protected $price;
     protected $discount;
     protected $available;
 
-    function __construct(String $name, String $description, Float $price, Int $discount, bool $available,)
+    function __construct(String $product_name, String $description, Float $price, Int $discount, bool $available,)
     {
-        $this->name = $name;
+        $this->product_name = $product_name;
         $this->description = $description;
         $this->price = $price;
         $this->discount = $discount;
