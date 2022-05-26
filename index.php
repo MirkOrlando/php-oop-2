@@ -20,10 +20,15 @@ particolare (es. da maggio ad agosto).
 require_once __DIR__ . '/Models/AnimalProduct.php';
 require_once __DIR__ . '/Models/Feed.php';
 require_once __DIR__ . '/Models/Forniture.php';
+require_once __DIR__ . '/Models/Accessory.php';
+require_once __DIR__ . '/Models/Healthcare.php';
 
 $dry_food = new Feed('Biscottini al formaggio', 'Lorem ipsum dolor sit amet.', 'cani', 5.99, 20, true);
 $scratcher = new Forniture('Albero tiragraffi', 'Lorem ipsum dolor sit amet.', 'gatti', 29.99, 20, true);
 $harness = new Accessory('Pettorina da passeggio', 'Lorem ipsum dolor sit amet.', 'cani', 14.99, 20, true);
+$pesticide = new Healthcare('Collare antiparassitario', 'Lorem ipsum dolor sit amet.', 'gatto', 19.99, 20, true);
 
 var_dump($dry_food);
 var_dump($scratcher);
+var_dump($harness);
+var_dump($pesticide);
