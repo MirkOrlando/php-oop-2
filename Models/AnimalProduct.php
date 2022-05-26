@@ -1,5 +1,5 @@
 <?php
-class AnimalProducts
+class AnimalProduct
 {
     protected $name;
     protected $description;
