@@ -6,4 +6,5 @@ class User
     protected $email;
     protected $password;
     protected $is_logged;
+    protected $credit_card;
 }
