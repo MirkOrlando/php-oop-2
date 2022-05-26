@@ -32,7 +32,17 @@ class User
             'number' => $card_number,
             'key' => $key_number,
             'expiration month' => $expiration_month,
-            'expiration year' => $expiration_month,
+            'expiration year' => $expiration_year,
         ];
+    }
+
+    public function getIsSigned()
+    {
+        return $this->is_signed;
+    }
+
+    public function getCreditCard()
+    {
+        return $this->credit_card;
     }
 }

@@ -20,14 +20,23 @@ class AnimalProduct
 
     public function isCreditCardExpired(User $user)
     {
-        if ($user->credit_card['year'] <= intval(date('Y'))) {
-            if ($user->credit_card['month'] <= intval(date('m'))) {
+        $credit_card = $user->getCreditCard();
+        if ($credit_card['year'] <= intval(date('Y'))) {
+            if ($credit_card['month'] <= intval(date('m'))) {
                 return true;
             } else {
                 return false;
             }
         } else {
             return false;
+        }
+    }
+
+    public function calcDiscount(User $user)
+    {
+        $is_signed = $user->getIsSigned();
+        if ($is_signed) {
+            $this->price = $this->price * $this->discount / 100;;;
         }
     }
 }
