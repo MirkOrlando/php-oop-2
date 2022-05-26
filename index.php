@@ -16,3 +16,6 @@ BONUS: Alcuni prodotti (es. antipulci) avranno la
 caratteristica che saranno disponibili solo in un periodo 
 particolare (es. da maggio ad agosto).
 */
+
+require_once __DIR__ . '/Models/AnimalProducts.php';
+require_once __DIR__ . '/Models/User.php';
