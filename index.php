@@ -19,7 +19,9 @@ particolare (es. da maggio ad agosto).
 
 require_once __DIR__ . '/Models/AnimalProduct.php';
 require_once __DIR__ . '/Models/Feed.php';
+require_once __DIR__ . '/Models/Forniture.php';
 
-$dry_food = new Feed('Crocchette al pollo', 'Lorem ipsum dolor sit amet.', 5.99, 20, true);
-
+$dry_food = new Feed('Biscottini al formaggio', 'Lorem ipsum dolor sit amet.', 'cani', 5.99, 20, true);
+$scratcher = new Forniture('Albero tiragraffi', 'Lorem ipsum dolor sit amet.', 'gatti', 29.99, 20, true);
 var_dump($dry_food);
+var_dump($scratcher);
