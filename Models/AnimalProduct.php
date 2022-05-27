@@ -36,7 +36,8 @@ class AnimalProduct
     {
         $is_signed = $user->getIsSigned();
         if ($is_signed) {
-            $this->price = $this->price * $this->discount / 100;;;
+            $discount = $this->price * $this->discount / 100;
+            $this->price = number_format($this->price - $discount, 2, ',', '.');
         }
     }
 }

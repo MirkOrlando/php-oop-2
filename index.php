@@ -20,5 +20,14 @@ particolare (es. da maggio ad agosto).
 require_once __DIR__ . '/db.php';
 //Europe/Rome
 date_default_timezone_set('Europe/Rome');
-var_dump(2022 <= intval(date('Y')));
+$user = $data['user'];
+$products = $data['products'];
+
+$user->signIn('example@test.it', 'password2022');
+$user->setCreditCard('000000000000', '123', '08', '2026');
+
+foreach ($products as $product) {
+    $product->calcDiscount($user);
+}
+
 var_dump($data);
