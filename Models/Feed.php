@@ -3,8 +3,8 @@
 class Feed extends AnimalProduct
 {
 
-    function __construct($product_name, $description, $animal_consumer, $price, $available)
+    function __construct($product_name, $poster, $description, $animal_consumer, $price, $available)
     {
-        parent::__construct($product_name, $description, $animal_consumer, $price, $available);
+        parent::__construct($product_name, $poster, $description, $animal_consumer, $price, $available);
     }
 }
