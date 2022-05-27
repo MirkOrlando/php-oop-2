@@ -1,6 +1,8 @@
 <?php
 class AnimalProduct
 {
+    use Quantity;
+
     protected $product_name;
     protected $description;
     protected $animal_consumer;
