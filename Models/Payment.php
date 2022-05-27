@@ -4,9 +4,6 @@ class Payment
 {
     public function isCreditCardExpired(User $user)
     {
-        if (!is_object($user)) {
-            throw new Exception("Is not an object");
-        }
         $credit_card_month = $user->getCreditCard()['month'];
         $credit_card_year = $user->getCreditCard()['year'];
         $current_year = intval(date('Y'));

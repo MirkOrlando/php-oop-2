@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/Models/Quantity.php';
+require_once __DIR__ . '/Models/Stock.php';
 require_once __DIR__ . '/Models/AnimalProduct.php';
 require_once __DIR__ . '/Models/Feed.php';
 require_once __DIR__ . '/Models/Forniture.php';

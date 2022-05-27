@@ -29,4 +29,10 @@ $user->setCreditCard('000000000000', '123',  8,  2026);
 
 var_dump($pay->isCreditCardExpired($user));
 
+try {
+    $products['0']->setNewSupply('ciao');
+} catch (Exception $e) {
+    echo 'Exception: ' . $e->getMessage();
+}
+
 var_dump($data);

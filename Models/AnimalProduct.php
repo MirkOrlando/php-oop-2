@@ -1,13 +1,14 @@
 <?php
 class AnimalProduct
 {
-    use Quantity;
+    use Stock;
 
     protected $product_name;
     protected $description;
     protected $animal_consumer;
     protected $price;
     protected $discount = 20;
+    protected $quantity = 1;
     protected $available;
 
     function __construct(String $product_name, String $description, String $animal_consumer, Float $price, bool $available,)
