@@ -26,8 +26,4 @@ $products = $data['products'];
 $user->signIn('example@test.it', 'password2022');
 $user->setCreditCard('000000000000', '123', '08', '2026');
 
-foreach ($products as $product) {
-    $product->calcDiscount($user);
-}
-
 var_dump($data);

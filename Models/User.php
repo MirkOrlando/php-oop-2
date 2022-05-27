@@ -26,7 +26,12 @@ class User
         $this->is_signed = true;
     }
 
-    public function setCreditCard($card_number, $key_number, $expiration_month, $expiration_year)
+    public function getIsSigned()
+    {
+        return $this->is_signed;
+    }
+
+    public function setCreditCard(String $card_number, String $key_number, Int $expiration_month, Int $expiration_year)
     {
         $this->credit_card = [
             'number' => $card_number,
@@ -34,11 +39,6 @@ class User
             'expiration month' => $expiration_month,
             'expiration year' => $expiration_year,
         ];
-    }
-
-    public function getIsSigned()
-    {
-        return $this->is_signed;
     }
 
     public function getCreditCard()
