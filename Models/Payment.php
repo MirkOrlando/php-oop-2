@@ -2,19 +2,14 @@
 
 class Payment
 {
-
-    protected $chart;
-
     public function isCreditCardExpired(User $user)
     {
-        $credit_card = $user->credit_card;
-        var_dump($credit_card['year']);
-        var_dump($credit_card['month']);
-        var_dump($credit_card['year'] <= intval(date('Y')));
-        var_dump($credit_card['month'] <= intval(date('m')));
-
-        if ($credit_card['year'] <= intval(date('Y'))) {
-            if ($credit_card['month'] <= intval(date('m'))) {
+        $credit_card_month = $user->getCreditCard()['month'];
+        $credit_card_year = $user->getCreditCard()['year'];
+        $current_year = intval(date('Y'));
+        $current_month = intval(date('m'));
+        if ($credit_card_year <= $current_year) {
+            if ($credit_card_month <= $current_month) {
                 return true;
             } else {
                 return false;

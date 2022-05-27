@@ -36,8 +36,8 @@ class User
         $this->credit_card = [
             'number' => $card_number,
             'key' => $key_number,
-            'expiration month' => $expiration_month,
-            'expiration year' => $expiration_year,
+            'month' => $expiration_month,
+            'year' => $expiration_year,
         ];
     }
 

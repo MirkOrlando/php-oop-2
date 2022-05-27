@@ -22,8 +22,11 @@ require_once __DIR__ . '/db.php';
 date_default_timezone_set('Europe/Rome');
 $user = $data['user'];
 $products = $data['products'];
+$pay = $data['payment'];
 
 $user->signIn('example@test.it', 'password2022');
-$user->setCreditCard('000000000000', '123', '08', '2026');
+$user->setCreditCard('000000000000', '123',  8,  2026);
+
+var_dump($pay->isCreditCardExpired($user));
 
 var_dump($data);

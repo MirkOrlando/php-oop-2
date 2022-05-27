@@ -6,6 +6,7 @@ require_once __DIR__ . '/Models/Forniture.php';
 require_once __DIR__ . '/Models/Accessory.php';
 require_once __DIR__ . '/Models/Healthcare.php';
 require_once __DIR__ . '/Models/User.php';
+require_once __DIR__ . '/Models/Payment.php';
 
 $data = [
     "products" => [
@@ -15,4 +16,5 @@ $data = [
         new Healthcare('Collare antiparassitario', 'Lorem ipsum dolor sit amet.', 'gatto', 19.99, true),
     ],
     "user" => new User('Mario', 'Rossi'),
+    "payment" => new Payment(),
 ];
